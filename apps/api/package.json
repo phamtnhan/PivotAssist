@@ -1,0 +1,37 @@
+{
+  "name": "@pivotassist/api",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "nest start --watch",
+    "build": "nest build",
+    "start": "node dist/main.js",
+    "typecheck": "tsc --noEmit",
+    "test": "node --experimental-strip-types --test jwt-env.test.ts"
+  },
+  "dependencies": {
+    "@fastify/cors": "^10.0.2",
+    "@nestjs/common": "^11.0.10",
+    "@nestjs/config": "^4.0.0",
+    "@nestjs/core": "^11.0.10",
+    "@nestjs/platform-fastify": "^11.0.10",
+    "@pivotassist/contracts": "workspace:*",
+    "@pivotassist/db": "workspace:*",
+    "@pivotassist/free-ai": "workspace:*",
+    "@pivotassist/storage": "workspace:*",
+    "bullmq": "^5.41.6",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.15.1",
+    "fastify": "^5.12.1",
+    "ioredis": "^5.6.0",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.2",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^11.0.4",
+    "@nestjs/schematics": "^11.0.2",
+    "@types/node": "^22.13.4",
+    "typescript": "^5.7.3"
+  }
+}

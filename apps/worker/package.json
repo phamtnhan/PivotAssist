@@ -1,0 +1,23 @@
+{
+  "name": "@pivotassist/worker",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc",
+    "start": "node dist/main.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@pivotassist/contracts": "workspace:*",
+    "@pivotassist/db": "workspace:*",
+    "@pivotassist/free-ai": "workspace:*",
+    "@pivotassist/storage": "workspace:*",
+    "bullmq": "^5.41.6",
+    "ioredis": "^5.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.4",
+    "typescript": "^5.7.3"
+  }
+}

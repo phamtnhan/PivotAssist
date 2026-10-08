@@ -1,0 +1,28 @@
+node_modules
+.pnpm-store
+dist
+.turbo
+.next
+out
+build
+coverage
+*.log
+.data
+.env
+.env.local
+.env.*.local
+.verify.local.env
+.DS_Store
+Thumbs.db
+
+# Build & tooling
+*.tsbuildinfo
+.vscode
+.idea
+.browser-evidence
+scripts/.browser-evidence
+
+# Test artifacts
+test-results
+playwright-report
+blob-report

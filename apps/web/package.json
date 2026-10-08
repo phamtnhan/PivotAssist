@@ -1,0 +1,50 @@
+{
+  "name": "@pivotassist/web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "node --max-old-space-size=12288 ./node_modules/next/dist/bin/next dev --turbopack --port 3000",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx --max-warnings 0",
+    "test:e2e": "playwright test",
+    "typecheck": "tsc --noEmit",
+    "test": "node --experimental-strip-types --test src/lib/adaptive-interviewer.test.ts src/lib/adaptive-interview-e2e.test.ts src/lib/adaptive-functional-expansion.test.ts src/lib/adaptive-voice-behavior.test.ts src/lib/hiring-pipeline.test.ts src/lib/jwt-secret.test.ts src/lib/keyed-limit.test.ts src/lib/request-origin.test.ts src/lib/avatar-file-key.test.ts src/lib/interview-session-cache.test.ts src/lib/user-preferences.test.ts src/lib/billing.test.ts src/lib/session-paths.test.ts src/lib/resume-derived.test.ts src/lib/local-file-storage.test.ts src/lib/momo.test.ts"
+  },
+  "dependencies": {
+    "@phosphor-icons/react": "^2.1.7",
+    "@pivotassist/contracts": "workspace:*",
+    "@pivotassist/db": "workspace:*",
+    "@pivotassist/free-ai": "workspace:*",
+    "@pivotassist/storage": "workspace:*",
+    "@prisma/client": "6.19.3",
+    "@types/qrcode": "^1.5.6",
+    "bcryptjs": "^2.4.3",
+    "clsx": "^2.1.1",
+    "ioredis": "^5.11.1",
+    "jose": "^5.9.6",
+    "jszip": "^3.10.1",
+    "livekit-client": "^2.22.3",
+    "motion": "^12.4.7",
+    "next": "15.5.24",
+    "pdfjs-dist": "4.10.38",
+    "qrcode": "^1.5.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwind-merge": "^3.0.1",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.62.1",
+    "@tailwindcss/postcss": "^4.0.7",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/node": "^22.13.4",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "15.5.24",
+    "postcss": "8.5.23",
+    "tailwindcss": "^4.0.7",
+    "typescript": "^5.7.3"
+  }
+}

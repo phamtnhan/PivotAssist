@@ -1,0 +1,88 @@
+.room {
+  --room-accent: #1a73e8;
+  --room-border: #e1e5ea;
+  --room-surface: #f8f9fb;
+  --room-ink: #202124;
+  background: var(--room-surface);
+  color: var(--room-ink);
+}
+
+.room button,
+.room a,
+.room input,
+.room textarea {
+  transition: background-color 160ms ease, color 160ms ease, box-shadow 160ms ease;
+}
+
+.room button:focus-visible,
+.room a:focus-visible,
+.room input:focus-visible,
+.room textarea:focus-visible {
+  outline: 2px solid var(--room-accent);
+  outline-offset: 3px;
+}
+
+.room button:disabled { cursor: not-allowed; }
+.room header {
+  box-shadow: 0 1px 0 rgb(32 33 36 / 8%), 0 6px 18px rgb(32 33 36 / 4%);
+  position: relative;
+  z-index: 2;
+}
+
+.room .stage {
+  background: radial-gradient(circle at 50% 0%, rgb(255 255 255 / 90%), transparent 48%), var(--room-surface);
+}
+
+.room .stage > section {
+  border: 1px solid var(--room-border);
+  border-radius: 24px;
+  box-shadow: 0 10px 28px rgb(33 34 38 / 8%);
+  overflow: hidden;
+  transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.room .stage > section:hover {
+  border-color: #c9d7f7;
+  box-shadow: 0 14px 34px rgb(33 34 38 / 11%);
+}
+
+.room .drawer [class*="shadow"] { box-shadow: none; }
+.room .drawer [class*="rounded-3xl"] { border-radius: 20px; }
+.room .drawer {
+  border-left: 1px solid var(--room-border);
+  box-shadow: -14px 0 32px rgb(33 34 38 / 9%);
+}
+
+.room footer {
+  box-shadow: 0 -10px 26px rgb(33 34 38 / 8%);
+}
+
+.room footer button {
+  box-shadow: none;
+  transition: background-color 160ms ease, color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.room footer button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 14px rgb(33 34 38 / 12%);
+}
+
+.room footer button:active:not(:disabled) {
+  transform: translateY(0) scale(0.98);
+}
+
+.room .stage > section { min-height: 220px; }
+.room .stage video { position: absolute; inset: 0; }
+.room .stage > section:first-of-type { background: linear-gradient(145deg, #eef3f8, #f8f9fb); }
+.room .drawer { overflow-wrap: anywhere; }
+.room .drawer [class*="uppercase"] { text-transform: none; letter-spacing: normal; font-family: inherit; }
+
+@media (max-width: 767px) {
+  .room .drawer { position: absolute; inset: 0; width: 100%; }
+  .room .stage { grid-auto-rows: minmax(220px, 1fr); gap: 12px; padding: 12px; }
+  .room .stage > section { border-radius: 20px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .room button, .room a, .room input, .room textarea { transition: none; }
+}

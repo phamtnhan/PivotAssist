@@ -1,0 +1,24 @@
+{
+  "name": "pivotassist",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "db:seed": "corepack pnpm --filter @pivotassist/free-ai build && corepack pnpm --filter @pivotassist/db build && node scripts/seed-demo.mjs",
+    "auth:provision": "node scripts/provision-local-auth.mjs",
+    "setup:free": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/setup-free-first.ps1",
+    "start:web": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/run-dev.ps1",
+    "smoke:free": "node scripts/smoke-free-first.mjs"
+  },
+  "devDependencies": {
+    "turbo": "^2.4.0",
+    "typescript": "^5.7.3"
+  },
+  "packageManager": "pnpm@11.24.0",
+  "engines": {
+    "node": ">=24.0.0"
+  }
+}
